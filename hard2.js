@@ -1,18 +1,19 @@
-function check(obj){
-    let ans = [];
-    ans=obj.filter(k => {
-        var pattern = /^[0-9]*/;
-        let flag=0;
-        for(let i=0;i<k.length;i++){
-            if(pattern == Number(k.charAt(i))) flag=1;
-            console.log(k.charAt(i));
-            console.log(typeof(Number(k.charAt(i))));
-        }
-        if(flag==1) return true;
-        else return false;
-    })
-    return ans;
-}
+function ans(obj){
+    let return_array=[];
+   for(i=0;i<obj.length;i++)
+   {
+    dummy =  obj[i].split("") ;
+        for(j = 0; j< dummy.length;j++)
+            {
+                if(dummy[j] >="0" && dummy[j]<="9")
+                {
+                    return_array.push(dummy.join(""));
+                    break;
+                }
+                
 
-let arr = ['qwert1','qwerty','12345'];
-console.log(check(arr));
+            }
+   }
+   return console.log(return_array);
+}
+ans(["sdfga1","asdfgh3","sdfghb","sdfgh","hrfgh"]);
